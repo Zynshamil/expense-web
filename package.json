@@ -1,0 +1,16 @@
+{
+  "name": "@penny/web", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {
+    "build:shared": "tsc -p ../api/shared/tsconfig.json",
+    "dev": "npm run build:shared && next dev --webpack --hostname localhost --port 5173",
+    "build": "npm run build:shared && next build --webpack",
+    "start": "next start --hostname 0.0.0.0 --port 5173",
+    "typecheck": "npm run build:shared && tsc --noEmit"
+  },
+  "dependencies": {
+    "@penny/shared": "file:../api/shared", "next": "16.3.4", "react": "19.2.6", "react-dom": "19.2.6", "lucide-react": "^1.31.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1", "tailwindcss": "4.2.1", "@types/react": "19.2.14", "@types/react-dom": "19.2.3", "typescript": "5.9.3", "@types/node": "^22.19.19"
+  }
+}
